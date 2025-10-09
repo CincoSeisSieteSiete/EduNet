@@ -1,0 +1,83 @@
+# Apartados
+- Login
+    - Correo Institucional
+    - Contraseña
+- Registro
+    - Nombre Completo
+    - Correo Institucional
+    - Contraseña
+    - Confirmar Contraseña
+- Home
+    - Noticias
+    - Actualizaciones
+    - Eventos
+    - Actividades Recientes
+- Perfil
+    - Información Personal
+    - Foto de Perfil [Opcional]
+    - Biografía
+    - Actividad Reciente
+- Configuración
+    - Privacidad
+    - Seguridad
+    - Preferencias
+        - Tema (Claro/Oscuro)
+        - Idioma
+- Buscador
+    - Usuarios
+    - Grupos
+    - Publicaciones
+- Chat
+    - Mensajes Directos
+    - Grupos de Chat
+- Notificaciones
+    - Nuevos Mensajes
+    - Solicitudes de Amistad
+    - Comentarios en Publicaciones
+- Publicaciones
+    - Crear Nueva Publicación
+    - Editar Publicación
+    - Eliminar Publicación
+    - Me Gusta
+- Comentarios [Opcional] por el momento.
+    - Añadir Comentario
+    - Editar Comentario
+    - Eliminar Comentario
+- Amigos/Seguidores
+    - Solicitudes de Amistad
+    - Lista de Amigos/Seguidores
+- Grupos/Comunidades
+    - Crear Nuevo Grupo
+    - Unirse a Grupo
+    - Gestionar Grupo (para administradores)
+
+    - Los grupos serán hechos por tokens para poder crearlos.
+
+- Eventos
+    Solo sera para admin la creación de eventos.
+    - Crear Evento
+        - Votaciones
+
+- Configuración de Cuenta
+    - Cambiar Contraseña
+    - Eliminar Cuenta
+- Ayuda/Soporte
+    - Preguntas Frecuentes
+    - Contactar Soporte
+
+
+# Ideas para implementar
+- Integración con Calendario
+- Integración con Redes Sociales
+- Sistema de Recompensas/Logros
+- Ingsignias para usuarios activos
+- Integración con servicios externos (Google Drive, Dropbox)
+- Publicaciones destacadas
+- Filtros avanzados de búsqueda
+- Menciones y Etiquetas
+- Compartir Publicaciones
+- Reacciones a Publicaciones (además de "Me Gusta")
+- Moderación de Contenido
+- Estadísticas de Usuario
+- Personalización de Perfil Avanzada
+- Integración con Servicios de Terceros (OAuth)
