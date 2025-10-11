@@ -1,4 +1,4 @@
-# 🧠 EduNet SV
+# 🧠 EdutNet SV
 
 **EduNet SV** es una red social educativa creada para conectar a estudiantes, fomentar el aprendizaje colaborativo y fortalecer las comunidades académicas.  
 Su propósito es ofrecer un espacio digital donde los estudiantes puedan **intercambiar ideas, compartir materiales de estudio, crear grupos de trabajo y participar en proyectos** de manera sencilla y organizada.

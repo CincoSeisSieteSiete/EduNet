@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="EdutNet es una red social educativa creada para conectar a estudiantes, fomentar el aprendizaje colaborativo y fortalecer las comunidades académicas." />
+    <meta name="keywords"
+        content="EdutNet, red social educativa, estudiantes, aprendizaje colaborativo, comunidades académicas, educación en línea, recursos educativos, networking estudiantil" />
+    <meta name="author" content="5677" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Layout.css') }}" />
+
+    <title>EDUTNET - La mejor red social para estudiantes</title>
+</head>
+
+<body>
+    <!--
+    Menú de navegación
+    -->
+    <header class="header sticky">
+        <div class="menu__btn">
+            <div class="menu__btn__lines"></div>
+        </div>
+        <a href="#" class="header__logo">EdutNet </a>
+        <div class="menu__horizontal">
+            <div class="menu__horizontal__wrapper">
+                <div class="header__menu">
+                    <ul class="main__menu">
+                        <li class="menu__item menu__item__group">
+                            <a href="#" class="menuItem__link">Inicio</a>
+                        </li>
+                        <li class="menu__item menu__item__group">
+                            <a href="#" class="menuItem__link">Explora</a>
+                            <div class="sub__menu mega__menu menu__catalogue">
+                                <div class="megaMenu__wrap">
+                                    <div class="megaMenu__inner">
+                                        <div class="megaMenu__item">
+                                            <div class="megaMenuTitle">
+                                                <a href="">Eventos</a>
+                                            </div>
+                                            <div class="megaMenuContent">
+                                                <ul class="sub__menu--static">
+                                                    <li class="menu__item">
+                                                        <a href="#" class="menuItem__link">Becas</a>
+                                                    </li>
+                                                    <li class="menu__item">
+                                                        <a href="#" class="menuItem__link">Trabajos</a>
+                                                    </li>
+                                                    <li class="menu__item">
+                                                        <a href="#" class="menuItem__link">Horas Sociales</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="megaMenu__item">
+                                            <div class="megaMenuTitle">
+                                                <a href="">Encuestas</a>
+                                            </div>
+                                            <div class="megaMenuContent">
+                                                <ul class="sub__menu--static">
+                                                    <li class="menu__item">
+                                                        <a href="#" class="menuItem__link">Nuevas Materias</a>
+                                                    </li>
+                                                    <li class="menu__item">
+                                                        <a href="#" class="menuItem__link">Nuevos Eventos</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="megaMenu__item">
+                                            <div class="megaMenuTitle">
+                                                <a href="">Noticias</a>
+                                            </div>
+                                            <div class="megaMenuContent">
+                                                <ul class="sub__menu--static">
+                                                    <li class="menu__item">
+                                                        <a href="#" class="menuItem__link">Suspension de clases</a>
+                                                    </li>
+                                                    <li class="menu__item">
+                                                        <a href="#" class="menuItem__link">Nuevos Eventos</a>
+                                                    </li>
+                                                    <li class="menu__item">
+                                                        <a href="#" class="menuItem__link">Cierre de Clases</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menuMega__catalogue">
+                                        <div class="col--left">
+                                            <div class="menuCatalogue__item">
+                                                <a href="">
+                                                    <img src="{{url_for('static', filename='img/Menu_img/Mate.png')}}" alt="" />
+                                                    <p>Matemática</p>
+                                                </a>
+                                            </div>
+                                            <div class="menuCatalogue__item">
+                                                <a href="">
+                                                    <img src="{{url_for('static', filename='img/Menu_img/Lenguaje.png')}}" alt="" />
+                                                    <p>Lenguaje</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col--right">
+                                            <div class="menuCatalogue__item">
+                                                <a href="">
+                                                    <img src="{{url_for('static', filename='img/Menu_img/sociales.png')}}" alt="" />
+                                                    <p>Sociales</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu__horizontal__btn">
+                <div class="menuBtn__wrapper">
+                    <button class="menu__prev">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="menu__next">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="cart__login__search">
+            <ul class="list__icon">
+                <li>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-regular fa-user"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-solid fa-map-location-dot"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="overlay"></div>
+   
+
+    <main>
+        <!-- Contenido de la página aquí -->
+    {% block content %}{% endblock %}
+    </main>
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-title">EDUTNET</span>
+                <p class="footer-description">
+                    EdutNet es una red social educativa creada para conectar a estudiantes, fomentar el aprendizaje
+                    colaborativo y fortalecer las comunidades académicas.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <span class="footer-section-title">REDES</span>
+                <ul class="footer-links">
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <span class="footer-section-title">EQUIPO</span>
+                <ul class="footer-links">
+                    <li>5677</li>
+                    <li>Nioy</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <span class="footer-section-title">SOPORTE</span>
+                <ul class="footer-links">
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#help">Ayuda</a></li>
+                    <li><a href="#privacy">Política de privacidad</a></li>
+                    <li><a href="#terms">Términos de servicio</a></li>
+                    <li><a href="#cookies">Política de cookies</a></li>
+                    <li><a href="#feedback"></a>Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© <span id="year"></span> - EDUTNET / Niozex Studio</span>
+                <span>Sistema de Educación</span>
+            </div>
+        </div>
+    </footer>
+
+    
+<script>
+  // Obtiene el año actual y lo inserta en el span con id="year"
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+    <!-- Scripts -->
+    <script type="module" src="{{ url_for('static', filename='js/Layout.js') }}"></script>
+</body>
+
+</html>
