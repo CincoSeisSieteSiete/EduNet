@@ -1,0 +1,61 @@
+.home{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(70, 43, 226);
+}
+
+.info{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.info_texto{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    margin-bottom: 20px;
+}
+.info_texto span{
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.info_texto p{
+    text-wrap: wrap;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+
+.elsalvador {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.elsalvador .Imagen {
+    width: 100%;       /* ocupa todo el ancho disponible */
+    height: auto;      /* ocupa todo el alto disponible */
+    object-fit: contain; /* mantiene proporción del SVG */
+
+}
+
+@media (max-width: 768px) {
+    .home{
+        display: none;
+    }
+}
