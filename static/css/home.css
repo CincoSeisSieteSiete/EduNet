@@ -1,14 +1,15 @@
 .home{
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(70, 43, 226);
+    overflow: hidden;
 }
 
 .info{
-    width: 40%;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -18,14 +19,14 @@
 }
 
 .info_texto{
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;    
     margin-bottom: 20px;
 }
 .info_texto span{
-    font-size: 45px;
+    font-size: 55px;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -34,6 +35,7 @@
     text-wrap: wrap;
     font-size: 15px;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 
@@ -44,13 +46,12 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin: 5px;
 }
 
 .elsalvador .Imagen {
     width: 100%;       /* ocupa todo el ancho disponible */
     height: auto;      /* ocupa todo el alto disponible */
-    object-fit: contain; /* mantiene proporción del SVG */
+    object-fit: cover; /* mantiene proporción del SVG */
 
 }
 
@@ -58,4 +59,62 @@
     .home{
         display: none;
     }
+}
+
+
+
+/*slider*/
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Degradado blanco izquierdo */
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Degradado blanco derecho */
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
 }
