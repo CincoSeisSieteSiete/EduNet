@@ -118,3 +118,77 @@
   height: 100px;
   width: 250px;
 }
+
+
+
+
+
+.Intereses {
+  width: 100%;
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.Interes {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: center;
+  transition: all 0.5s ease;
+  background-size: cover;      /* la imagen cubre todo el div */
+  background-position: center; /* centrada */
+  overflow: hidden;
+  position: relative;
+}
+
+/* efecto zoom sobre el fondo */
+.Interes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+/* el texto encima de la imagen */
+.Interes span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover: zoom del fondo */
+.Interes:hover::before {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .Intereses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .Intereses {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

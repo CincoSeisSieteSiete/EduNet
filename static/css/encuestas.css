@@ -1,0 +1,143 @@
+.Encuestas_Contenedor{
+    width: 90%;
+    min-height: 100vh;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.form-encuesta {
+  background: #ffffff;
+  /* Reduced border radius for cleaner look */
+  border-radius: 8px;
+  padding: 48px;
+  /* Subtle shadow for minimal depth */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.form-header {
+  margin-bottom: 40px;
+}
+
+.title {
+  /* Simplified typography */
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.descripcion {
+  font-size: 16px;
+  /* Lighter gray for secondary text */
+  color: #666666;
+  font-weight: 400;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  /* Increased gap for more breathing room */
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.opcion {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* Removed background color for cleaner look */
+  background: transparent;
+  /* Simple thin border */
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 18px 20px;
+  cursor: pointer;
+  /* Simplified transition */
+  transition: all 0.2s ease;
+}
+
+.opcion input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Removed all decorative elements like badges and check marks */
+.opcion-texto {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  /* Simplified transition */
+  transition: color 0.2s ease;
+}
+
+/* Minimal hover state */
+.opcion:hover {
+  border-color: #000000;
+  background: #fafafa;
+}
+
+/* Clean selected state with black border and background */
+.opcion:has(input:checked) {
+  background: #000000;
+  border-color: #000000;
+}
+
+.opcion input:checked ~ .opcion-texto {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.btn-votar {
+  width: 100%;
+  padding: 16px 32px;
+  border: none;
+  /* Reduced border radius */
+  border-radius: 6px;
+  /* Solid black background */
+  background: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  /* Simplified transition */
+  transition: all 0.2s ease;
+  /* Removed shadow */
+}
+
+/* Subtle hover effect */
+.btn-votar:hover {
+  background: #333333;
+}
+
+.btn-votar:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 640px) {
+  .form-encuesta {
+    padding: 32px 24px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .descripcion {
+    font-size: 15px;
+  }
+
+  .opcion {
+    padding: 16px 18px;
+  }
+
+  .opcion-texto {
+    font-size: 15px;
+  }
+}

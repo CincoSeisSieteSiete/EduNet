@@ -1,0 +1,35 @@
+{% extends "Layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/encuestas.css') }}" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+<div class="Encuestas_Contenedor">
+    {% if request.cookies.get('voto_' + encuesta_id) %}
+        <p><b>Ya votaste. Gracias por participar!</b></p>
+        <ul>
+            {% for opcion, votos in encuesta.opciones.items() %}
+                <li>{{ opcion }} - {{ votos }} votos ({{ (votos/total_votes*100 if total_votes>0 else 0)|round(1) }}%)</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <form id="formEncuesta" action="{{ url_for('votar', encuesta_id=encuesta_id) }}" method="POST">
+            {% for opcion, votos in encuesta.opciones.items() %}
+                <label>
+                    <input type="radio" name="opcion" value="{{ opcion }}" required> {{ opcion }}
+                </label><br>
+            {% endfor %}
+        </form>
+    {% endif %}
+</div>
+
+<script>
+// Votar automáticamente al seleccionar una opción
+document.querySelectorAll('input[name="opcion"]').forEach(input => {
+    input.addEventListener('change', () => {
+        document.getElementById('formEncuesta').submit();
+    });
+});
+</script>
+
+{% endblock %}

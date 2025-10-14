@@ -1,0 +1,20 @@
+{
+    "encuesta1": {
+        "nombre": "Encuesta de Estudiantes",
+        "descripcion": "Elige la opción que más te represente",
+        "opciones": {
+            "Tecnología": 0,
+            "Programación": 0,
+            "Arte": 0
+        }
+    },
+    "encuesta2": {
+        "nombre": "Preferencias de Música",
+        "descripcion": "Elige tu género musical favorito",
+        "opciones": {
+            "Rock": 0,
+            "Pop": 0,
+            "Clásica": 0
+        }
+    }
+}
