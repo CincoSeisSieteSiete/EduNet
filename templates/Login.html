@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <title>EdutNet - Login</title>
+</head>
+<body>
+    <main class="container">
+        <div class="sign-in-card">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 5L30 15L25 20L20 15L15 20L10 15L20 5Z" fill="#1a1a1a"/>
+                    <path d="M10 20L15 25V35H25V25L30 20L25 15L20 20L15 15L10 20Z" fill="#1a1a1a"/>
+                </svg>
+                <span class="logo-text">EDUTNET</span>
+            </div>
+
+            <h1>inicio de sesión</h1>
+
+            <form>
+                <div class="form-group">
+                    <label for="email">Correo [Institucional]</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">✉</span>
+                        <input type="email" id="email" placeholder="000000.clases.edu.sv" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔒</span>
+                        <input type="password" id="password" minlength="8" maxlength="20" placeholder="••••••••••••" required>
+                    </div>
+                </div>
+                <button type="submit" class="sign-in-btn">iniciar sesión</button>
+                <div class="links">
+                    <p>¿No tienes cuenta? <a href="#">Registrarse</a></p>
+                    <a href="#" class='Olvide'>¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <!--
+                <div class="social-login">
+                    <button type="button" class="social-btn" aria-label="Sign in with Google">
+                        <svg width="32" height="32" viewBox="0 0 32 32">
+                            <path fill="#4285F4" d="M16 12.8v6.4h8.8c-.4 2-2.4 6-8.8 6-5.3 0-9.6-4.4-9.6-9.6s4.3-9.6 9.6-9.6c3 0 5 1.3 6.2 2.4l5-4.8C24.4 1.2 20.6 0 16 0 7.2 0 0 7.2 0 16s7.2 16 16 16c9.2 0 15.3-6.5 15.3-15.6 0-1-.1-1.8-.2-2.6H16z"/>
+                            <path fill="#34A853" d="M16 32c4.4 0 8.1-1.5 10.8-4l-5-4c-1.4 1-3.2 1.6-5.8 1.6-4.4 0-8.2-3-9.5-7l-5.2 4C3.8 28.2 9.4 32 16 32z"/>
+                            <path fill="#FBBC05" d="M6.5 19.6l-5.2 4C.5 21.4 0 18.8 0 16c0-2.8.5-5.4 1.3-7.6l5.2 4c-.3 1-.5 2.1-.5 3.2 0 1.1.2 2.2.5 3z"/>
+                            <path fill="#EA4335" d="M16 6.4c2.5 0 4.2.9 5.2 1.6l3.9-3.8C22.4 1.5 19.6 0 16 0 9.4 0 3.8 3.8 1.3 9.4l5.2 4C7.8 9.4 11.6 6.4 16 6.4z"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="social-btn" aria-label="Sign in with GitHub">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#1a1a1a">
+                            <path d="M16 0C7.16 0 0 7.16 0 16c0 7.07 4.58 13.06 10.94 15.18.8.15 1.09-.35 1.09-.77 0-.38-.01-1.39-.02-2.73-4.45.97-5.39-2.15-5.39-2.15-.73-1.85-1.78-2.34-1.78-2.34-1.45-1 .11-.98.11-.98 1.61.11 2.45 1.65 2.45 1.65 1.43 2.45 3.75 1.74 4.66 1.33.14-1.04.56-1.74 1.02-2.14-3.55-.4-7.29-1.78-7.29-7.91 0-1.75.62-3.18 1.65-4.3-.17-.4-.72-2.03.16-4.23 0 0 1.35-.43 4.41 1.64 1.28-.36 2.65-.54 4.01-.54 1.36 0 2.73.18 4.01.54 3.06-2.07 4.41-1.64 4.41-1.64.88 2.2.33 3.83.16 4.23 1.03 1.12 1.65 2.55 1.65 4.3 0 6.15-3.74 7.51-7.31 7.9.58.5 1.09 1.48 1.09 2.98 0 2.15-.02 3.89-.02 4.41 0 .43.29.93 1.1.77C27.42 29.06 32 23.07 32 16c0-8.84-7.16-16-16-16z"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="social-btn" aria-label="Sign in with Facebook">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#1877F2">
+                            <path d="M32 16c0-8.84-7.16-16-16-16S0 7.16 0 16c0 7.99 5.85 14.6 13.5 15.8V20.62H9.44V16h4.06v-3.52c0-4.01 2.39-6.22 6.04-6.22 1.75 0 3.58.31 3.58.31v3.94h-2.02c-1.98 0-2.6 1.23-2.6 2.49V16h4.43l-.71 4.62h-3.72v11.18C26.15 30.6 32 23.99 32 16z"/>
+                        </svg>
+                    </button>
+                    -->
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

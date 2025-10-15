@@ -3,8 +3,12 @@ import os
 import json
 
 app = Flask(__name__)
-VOTES_FILE = 'encuestas.json'
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+# Cosas que ve el usuarios ya registrado
 @app.route('/')
 def home():
     return render_template('home.html')
