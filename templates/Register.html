@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Register.css') }}">
+    <title>Register</title>
+</head>
+<body>
+    <form action="">
+        <div class="Parte1" id="Parte1">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="Nombre">Nombre Completo:</label>
+            <input type="text" id="Nombre" name="Nombre" required><br><br>
+
+
+            <div class="acciones">
+            <a href="#Parte2">Siguiente</a>
+            </div>
+        </div>
+
+        <div class="Parte2" id="Parte2">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <div class="acciones">
+            <a href="#Parte1">volver</a>
+            <a href="#Parte3">Siguiente</a>
+            </div>
+        </div>
+        
+        <div class="Parte3" id="Parte3">
+        <label for="Departamento">Departamento:</label>
+        <select name="Departamento" id="Departamento">
+            <option value="San Salvador">San Salvador</option>
+            <option value="La Libertad">La Libertad</option>
+            <option value="Santa Ana">Santa Ana</option>
+            <option value="San Miguel">San Miguel</option>
+            <option value="Sonsonate">Sonsonate</option>
+        </select><br><br>
+        <select name="Nivel_educativo" id="Nivel_educativo">
+            <option value="Primaria">Primaria</option>
+            <option value="Secundaria">Secundaria</option>
+            <option value="Bachillerato">Bachillerato</option>
+            <option value="Universidad">Universidad</option>
+        </select>
+
+        <div class="acciones">
+            <a href="#Parte2">volver</a>
+        <button type="submit">Register</button>
+        </div>
+        
+        </div>
+
+        
+    </form>
+</body>
+</html>
